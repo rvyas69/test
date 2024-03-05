@@ -173,6 +173,6 @@ const schema = makeExecutableSchema({
 // Create an Apollo Server instance with the merged schema
 const server = new ApolloServer({ schema });
 
-server.listen({ port: process.env.PORT }).then(({ url }) => {
+server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
   console.log(`Gateway running at ${url}`);
 });
